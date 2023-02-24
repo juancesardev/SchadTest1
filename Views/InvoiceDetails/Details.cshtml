@@ -1,0 +1,67 @@
+﻿@model test4.Models.InvoiceDetail
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Detail Id
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Qty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalItbis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+            <tr>
+                <td>
+                    @Model.Id
+                </td>
+                <td>
+                @Html.DisplayFor(model => model.Qty)
+                </td>
+                <td>
+                @Html.DisplayFor(model => model.Price)
+                </td>
+                <td>
+                @Html.DisplayFor(model => model.TotalItbis)
+                </td>
+                <td>
+                @Html.DisplayNameFor(model => model.SubTotal)
+                </td>
+                <td>
+                @Html.DisplayFor(model => model.Total)
+                </td>
+                <td>
+                @ViewBag.CustomerName
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        
+    </tbody>
+</table>
+<br /><br>
+<a asp-action="Index" asp-controller="Invoices">Back to List</a>
+
